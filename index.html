@@ -61,7 +61,7 @@
           Sportswear
         </h2>
         <section class="flex flex-col lg:flex-row gap-6">
-          <div class="card bg-base-100 shadow-md">
+          <div onclick="handler(this)" class="card bg-base-100 shadow-md">
             <figure class="px-10 pt-10">
               <img
                 src="./images/prod4.png"
@@ -98,11 +98,11 @@
                   class="mask mask-star-2 bg-orange-400"
                 />
               </div>
-              <h2 class="card-title">Sports Back Cap</h2>
+              <h2 id="title" class="card-title">Sports Back Cap</h2>
               <p class="text-[#1111117F]">49.00 TK</p>
             </div>
           </div>
-          <div class="card bg-base-100 shadow-md">
+          <div onclick="handler(this)" class="card bg-base-100 shadow-md">
             <figure class="px-10 pt-10">
               <img
                 src="./images/prod5.png"
@@ -143,7 +143,7 @@
               <p class="text-[#1111117F]">69.00 TK</p>
             </div>
           </div>
-          <div class="card bg-base-100 shadow-md">
+          <div onclick="handler(this)" class="card bg-base-100 shadow-md">
             <figure class="px-10 pt-10">
               <img
                 src="./images/prod6.png"
@@ -192,7 +192,7 @@
           Furniture
         </h2>
         <section class="flex flex-col lg:flex-row gap-6">
-          <div class="card bg-base-100 shadow-md">
+          <div onclick="handler(this)" class="card bg-base-100 shadow-md">
             <figure class="px-10 pt-10">
               <img
                 src="./images/prod7.png"
@@ -233,7 +233,7 @@
               <p class="text-[#1111117F]">185.00 TK</p>
             </div>
           </div>
-          <div class="card bg-base-100 shadow-md">
+          <div onclick="handler(this)" class="card bg-base-100 shadow-md">
             <figure class="px-10 pt-10">
               <img
                 src="./images/prod8.png"
@@ -274,7 +274,7 @@
               <p class="text-[#1111117F]">299.00 TK</p>
             </div>
           </div>
-          <div class="card bg-base-100 shadow-md">
+          <div onclick="handler(this)" class="card bg-base-100 shadow-md">
             <figure class="px-10 pt-10">
               <img
                 src="./images/prod9.png"
@@ -333,10 +333,11 @@
           </button>
         </div>
         <div class="mt-12 shadow-md p-4 text-center lg:text-start">
+          <div id="title-item" class="title-item"></div>
           <hr class="my-3" />
           <h3 class="font-semibold">
             Total price:<span class="text-[#1111117F]"
-              ><span>00.00</span>TK</span
+              ><span id="total">00.00</span>TK</span
             >
           </h3>
           <h3 class="font-semibold">
@@ -346,10 +347,34 @@
             Total:<span class="text-[#1111117F]"><span>00.00</span>TK</span>
           </h3>
           <hr class="my-6" />
-          <div class="text-center">
-            <button class="bg-[#E527B2] py-2 px-8 rounded-lg text-white">
+          <!-- <div disabled="disabled" class="text-center">
+             <button
+              id="disabled"
+              class="bg-[#E527B2] py-2 px-8 rounded-lg text-white" 
+            >
               Make Purchase
+            </button> 
+          </div> -->
+          <!-- Open the modal using ID.showModal() method -->
+          <div class="text-center">
+            <button
+              class="btn bg-[#E527B2] hover:bg-[#E527B2] py-2 px-8 rounded-lg text-white"
+              onclick="my_modal_5.showModal()"
+            >
+            Make Purchase
             </button>
+            <dialog id="my_modal_5" class="modal modal-bottom sm:modal-middle">
+              <form method="dialog" class="modal-box">
+                <img class="lg:ml-40" src="./images/congo.png" alt="">
+                <h3 class="font-bold text-3xl">Congratulations</h3>
+                <p class="py-4">
+                  Your Purchase the product
+                </p>
+                <div class="modal-action ">
+                  <button class="btn text-center lg:mr-44 bg-[#E527B2] hover:bg-[#E527B2] text-white">Go Home</button>
+                </div>
+              </form>
+            </dialog>
           </div>
         </div>
       </div>
